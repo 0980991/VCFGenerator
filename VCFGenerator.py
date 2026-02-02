@@ -18,7 +18,7 @@ class VCFGenerator:
         return re.sub(r"\D", "", number)
 
     def generateFilename(self):
-        timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        timestamp = datetime.now().strftime("%Y-%m-%d %H-%M-%S")
         return f"contacts {timestamp}.vcf"
     
     def generateVCF(self):
