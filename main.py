@@ -25,7 +25,8 @@ def parse_args() -> argparse.Namespace:
 def main() -> None:
     args = parse_args()
     VCFG = VCFGenerator(args.input, args.output)
-    VCFG.generateVCF() 
+    VCFG.generateVCF()
+    print(f"VCF file succesfully generated in {args.output}")
 
 
 if __name__ == "__main__":
