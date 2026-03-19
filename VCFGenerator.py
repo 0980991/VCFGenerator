@@ -4,7 +4,6 @@ from datetime import datetime
 class VCFGenerator:
     def __init__(self, input_path, output_path=""):
         self.input_file = input_path
-        print(f"input path from VCF init: {self.input_file}")
         if output_path == "":
             self.output_file = self.generateFilename()
         else:
