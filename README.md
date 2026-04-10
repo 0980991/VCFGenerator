@@ -4,7 +4,10 @@ A CLI tool for generating .vcf files from text files. Created to convert a list 
 ## How to get started: 
  - Simply download or clone the repo.
  - Navigate to the folder containing main.py
- - Run `python3 main.py -i your_list_of_numbers.txt -o "your_output_vcf_file.vcf". No external libraries required.
-
+ - Run `python3 main.py -i your_list_of_numbers.txt -o "your_output_vcf_file.vcf"`. No external libraries required.
 
 The file test_phonenumbers.txt can be used as test input and shows what phone number formats can be parsed by the script.
+
+To import a CSV file, simply run: `python3 main.py -i your_list_of_numbers.csv -o "your_output_vcf_file.vcf"`
+
+The VCF generator expects the the following columns and order: Phone,Name,Organization,Title,Email,Address. Refer to test_contacts.csv for an example of a valid csv file.
