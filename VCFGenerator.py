@@ -67,7 +67,7 @@ class VCFGenerator:
                         f"FN:{first} {last}\n"
                         f"N:{last};{first}\n"
                         f"ORG:{organization}\n"
-                        f"TITLE:={title}\n"
+                        f"TITLE:{title}\n"
                         f"TEL;TYPE=CELL:{sanitized_number}\n"
                         f"EMAIL:{email}\n"
                         f"ADR:{address}\n"
