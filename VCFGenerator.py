@@ -49,11 +49,11 @@ class VCFGenerator:
                 contact_data = list(reader)
                 
                 for i, contact in enumerate(contact_data):
-                    # When there is nothing in the "Phone" field of the contact record, the contact will not be created
-                    if i != 0 and contact[0] == "":
-                        continue
-                    
                     sanitized_number, name, organization, title, email, address = self.sanitizeNumber(contact[0]), contact[1], contact[2], contact[3], contact[4], contact[5]
+                    # When there is nothing in the "Phone" field of the contact record, the contact will not be created
+                    if i != 0 and sanitized_number == "":
+                        continue
+                        
                     if not name:
                         name = f"Contact {i:03d}"
                     try: 
